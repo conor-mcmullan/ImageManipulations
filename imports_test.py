@@ -2,7 +2,6 @@ try:
     import tensorflow
     import keras
     import cv2
-    import opencv_python
     import numpy
     import matplotlib
     import h5py
@@ -13,7 +12,6 @@ except Exception as import_error:
 
 if __name__ == "__main__":
     assert (tensorflow)
-    assert (opencv_python)
     assert (cv2)
     assert (numpy)
     assert (matplotlib)
