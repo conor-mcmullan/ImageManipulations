@@ -11,10 +11,10 @@ except Exception as import_error:
 
 
 if __name__ == "__main__":
-    assert (tensorflow)
-    assert (cv2)
-    assert (numpy)
-    assert (matplotlib)
-    assert (h5py)
-    assert (keras)
-    assert (scipy)
+    assert tensorflow
+    assert cv2
+    assert numpy
+    assert matplotlib
+    assert h5py
+    assert keras
+    assert scipy
