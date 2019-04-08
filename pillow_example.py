@@ -92,7 +92,7 @@ if __name__ == "__main__":
     pieces = ROWS * COLS
     print("number of tiles = ", pieces)
 
-    pieces_list = []
+    boxes_list = []
 
     piece_h = (h / ROWS) - 2  # 2 pixels
     piece_w = (w / COLS) - 2  # 2 pixels
@@ -102,18 +102,17 @@ if __name__ == "__main__":
 
     for r in range(ROWS):
         for c in range(COLS):
-
             upper = r * piece_h
             lower = upper + piece_h
             right_most = (c + 1) * piece_w
             left_most = c * piece_w
-
             Box = (left_most, upper, right_most, lower)
-            pieces_list.append(Box)
             cropped = image_1.crop(box=Box)
             cropped_fn = img_hand.BOX_IMAGES + f'{str(r)}_{str(c)}.jpg'
+            boxes_list.append(cropped_fn)
             cropped.save(cropped_fn)
 
+    print("Number Pieces:\t", len(boxes_list))
+    print(boxes_list)
 
-    print("Number Pieces:\t", len(pieces_list))
-    print(pieces_list)
+    # TODO - compress images + weight them and create list of groups
